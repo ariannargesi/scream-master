@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    user-select: none;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 0.5s linear infinite;
+    -moz-animation: rotating 0.5s linear infinite;
+    -ms-animation: rotating 0.5s linear infinite;
+    -o-animation: rotating 0.5s linear infinite;
+    animation: rotating 0.5s linear infinite;
+  }
+.container {
+    height: 100vh;
+    width: 100%;
+    background: rgb(71, 71, 71);
+    position: relative;
+}
+.character {
+    width: 50px;
+    height: 50px;
+    background-image: url("images/ball-bg.png");
+    /* animation: spin 1s infinite; */
+    background-size: 50px 50px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.hedge {
+    background: greenyellow;
+    position: absolute;
+    /* height: 200px; */
+    width: 100px;
+    right: 0;
+    background-image: url("images/wall-bg.png");
+    background-size: 100px 100px;
+}
+.score-wrapper {
+    font-size: 32px;
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    font-weight: 700;
+    color: white;
+    z-index:  100;
+}
+.start-game {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(22, 22, 22, 0.816);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    flex-direction: column;
+}
+.start-game p {
+    padding: 0.5rem;
+}
+@keyframes start {
+    0% {
+        font-size: 3rem
+    }
+    25%{
+        font-size: 2.75
+    }
+    50% {
+        font-size: 2.5rem;
+    }
+    75%{
+        font-size: 2.75;
+    }
+    100% {
+        font-size: 3rem;
+    }
+}
+.start-game-text {
+    animation-name: start;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    font-size: 3rem;
+}
+bold{
+    font-weight: 800;
+    font-size: 22px;
+    color: rgb(34, 255, 0);
+}
+p{
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+button.restart {
+    background: none;
+    color: rgb(0, 255, 34);
+    border: 3px solid rgb(0, 255, 34);
+    font-size: 18px;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    transition: 0.5s;
+    outline: none;
+    position: absolute;
+    top: 65%;
+
+}
+button.restart:hover {
+    background:rgba(255, 0, 0, 0.088);
+}
+
+
+
+
+.color-green {
+    color: rgb(0, 255, 0);
+}
+.color-red{
+    color: red;
+}
+.slider {
+    transform: rotate( -90deg);
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #ffffff; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 10px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 2px;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  .heightlight{
+      background-color: lightgreen;
+      color: black;
+  }
+  .t-center{
+      text-align: center;
+  }
+.sound-level-number {
+    position: absolute;
+    left: 3%;
+    bottom: 10%;
+    font-size: 14px;
+    z-index: 99;
+}
+.sound-level-number::before{
+    content: "sound level:   ";
+    color: gray;
+}
+.sensitivity {
+    position: absolute;
+    left: 18%;
+    bottom: 10%;
+    text-align: center;
+    display: flex;
+    height: 130px;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 99;
+    font-size: 14px;
+    color: gray;    
+}
+.sound-level-hint {
+    position: absolute;
+    left: 32%;
+    bottom: 10%;
+    z-index: 99;
+}
+.sound-level-hint p {
+    font-size: 14px;
+    color: gray;    
+}
+
+.color-red{
+    color: red;
+}
+.color-green{
+    color: rgb(0, 255, 0);
+}
+.color-yellow {
+    color: yellow;
+}
+.color-gray {
+    color: gray;
+}
+
+
+
+
+
+
+
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(-25deg);
+    }
+
+    40% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(-25deg);
+    }
+
+    80% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+
+.demo {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+
+
+

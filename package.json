@@ -1,0 +1,32 @@
+{
+  "name": "sc",
+  "version": "1.0.0",
+  "description": "voice based game using vinlla javascript ",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariannargesi/sc.git"
+  },
+  "author": "arian nargesi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ariannargesi/sc/issues"
+  },
+  "homepage": "https://github.com/ariannargesi/sc#readme",
+  "dependencies": {
+    "jest": "^26.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.6.0",
+    "prettier": "2.0.5",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
