@@ -2,8 +2,8 @@ import nodes from '../domNodes'
 
 // return true if the rectangle and circle are colliding
 export const RectCircleColliding = (circle, rect) => {
+    
     circle.r = 40
-    console.log(rect)
     var distX = Math.round(Math.abs(circle.x - rect.x + 18 - rect.width / 2))
     var distY = Math.round(Math.abs(circle.y - (rect.y != 0 ? rect.y -10 : rect.y  - 50) - rect.height / 2))
 
