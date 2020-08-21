@@ -3,6 +3,7 @@ body {
     padding: 0;
     font-family: 'Orbitron', sans-serif;
     user-select: none;
+    overflow: hidden;
 }
 *{
     box-sizing: border-box;
