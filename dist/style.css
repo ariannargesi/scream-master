@@ -274,5 +274,29 @@ button.restart:hover {
 }
 
 
+.feedback {
+    width: 280px;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    z-index: 99;
+    border-bottom: 1px solid white;
+}
+.feedback h5{
+    color: gray;
+}
 
-
+.feedback .textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 1px 6px;
+    color: white;       
+    display: block;
+    width: 100%;
+    outline: none;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    resize: both;
+    min-height: 40px;
+    line-height: 20px;
+  }

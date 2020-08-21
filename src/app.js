@@ -86,7 +86,7 @@ const moveHedges = () => {
         for (let hedge of hedges) {
             let hedgeLeft = Math.round(hedge.getBoundingClientRect().left)
             hedgeLeft -= states.gameSpeed
-            if (hedgeLeft <= -30) {
+            if (hedgeLeft <= -50) {
                 nodes.container.removeChild(hedge)
             }
             hedge.style.left = hedgeLeft + 'px'
