@@ -32,16 +32,18 @@ export const setBallPosition = (position) => {
 }
 
 export const scoreRating = (score) => {
-    if(score < 400)
-        return "Very Bad"
-    else if(score > 400 && score < 600)
-        return "Not Bad"
-    else if(score > 600 && score < 800)
-        return "Well Done"
-    else if(score > 800 && score < 1000)
-        return "Good Record"
-    else if (score > 1000)
-        return "Your Are a Rock Start"
+    if(score < 600)
+        return "that's not good, would you like to try again?"
+    else if(score > 600 && score < 1200)
+        return "this is something! but i belive you can do better"
+    else if(score > 1200 && score < 2500)
+        return "this is a good record. well done :)"
+    else if(score > 2500 && score < 5000)
+        return "impressive record"
+    else if (score > 5000 && score < 1000)
+        return "the way you play is impeccable"
+    else if (score >  3500)
+        return "you are phenomenal"
 }
 
 export const getTrue = () =>{
