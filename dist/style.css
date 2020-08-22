@@ -286,17 +286,25 @@ button.restart:hover {
     color: gray;
 }
 
-.feedback .textarea {
+.feedback .feedback-textarea {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     padding: 1px 6px;
     color: white;       
     display: block;
-    width: 100%;
+    width: 90%;
     outline: none;
     margin-top: 0.5rem;
     overflow: hidden;
-    resize: both;
+    resize: vertical;
     min-height: 40px;
     line-height: 20px;
   }
+  .feedback-send {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      right: 10px;
+      bottom: 20px;
+      cursor: pointer;
+    }
