@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ariannargesi/sc#readme",
   "dependencies": {
+    "axios": "^0.20.0",
     "jest": "^26.4.1"
   },
   "devDependencies": {
