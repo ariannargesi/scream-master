@@ -7,7 +7,9 @@ const nodes = {
     soundLevelNum: document.querySelector('.sound-level-number'),
     inputSlider: document.querySelector('.slider'),
     soundLevelHint: document.querySelector('.sound-level-hint'),
-    sensitivity: document.querySelector('.sensitivity')
+    sensitivity: document.querySelector('.sensitivity'),
+    feedbackSend: document.querySelector('.feedback-send'),
+    feedbackTextarea: document.querySelector('.feedback-textarea')
 }
 
 export default nodes
