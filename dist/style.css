@@ -277,13 +277,17 @@ button.restart:hover {
 .feedback {
     width: 280px;
     position: absolute;
-    left: 10%;
+    left: 3%;
     top: 10%;
     z-index: 99;
     border-bottom: 1px solid white;
+    transition: 1s;
+   
 }
-.feedback h5{
+.feedback-text{
     color: gray;
+    animation-duration: 200ms;
+    text-overflow: ellipsis;
 }
 
 .feedback .feedback-textarea {
@@ -299,6 +303,8 @@ button.restart:hover {
     resize: vertical;
     min-height: 40px;
     line-height: 20px;
+    transition: 1s;
+   
   }
   .feedback-send {
       width: 15px;
@@ -307,4 +313,6 @@ button.restart:hover {
       right: 10px;
       bottom: 20px;
       cursor: pointer;
+      transition: 1s;
+   
     }
