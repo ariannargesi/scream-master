@@ -2,6 +2,7 @@ import getMicSoundLevel from './audio'
 import states from './state'
 import nodes from './domNodes'
 import createHedges from './hedges'
+import './events'
 import { RectCircleColliding, setBallPosition, scoreRating } from './funcs'
 
 
