@@ -1,10 +1,27 @@
-const path = require("path");
-
+const path = require('path');
 module.exports = {
-  entry: "./src/app.js",
+
+  // webpack will take the files from ./src/index
+  entry: './src/app.js',
+    
+  // and output it into /dist as bundle.js
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.join(__dirname, '/dist'),
+    filename: 'bundle.js'
   },
-  mode: "development",
+
+
+  module: {
+    rules: [
+
+        // we use babel-loader to load our jsx and tsx files
+      {
+        test: /\.(ts|js)x?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        },
+      }      
+    ]
+  }
 };
