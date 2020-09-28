@@ -24,18 +24,13 @@ nodes.feedbackSend.addEventListener('click', () => {
         console.log(err)
     }).finally(() => {
         enableFeedbackSend()
-        
-        nodes.feedbackTextarea.style.display = "none"
-        nodes.feedbackSend.style.display = "none"
-        const  feedbackContainer = document.querySelector('.feedback')
-        feedbackContainer.style.borderBottom  = "none"
+        nodes.feedback.style.display = "none"
+        const span = document.createElement('span')
+        span.innerText = "thanks for your feedback!"
+        span.setAttribute('class', 'feedback-thanks')
+        document.body.appendChild(span)
         setTimeout(() => {
-            feedbackContainer.style.opacity = 0 
-        },2000)
-        const feedbackTxt = document.querySelector('.feedback-text')
-        feedbackTxt.style.color = "rgb(0, 255, 0)"
-        feedbackTxt.innerText = "thank you for your feedback!"
-
+            document.body.removeChild(span)
+        },3000)
     })
 })
-
