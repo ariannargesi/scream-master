@@ -35,7 +35,8 @@ const getMicSoundLevel = (cb) => {
                 console.log('The following error occured: ' + err.name)
             }
         )
-    } else {
+    }
+    else {
         console.log('getUserMedia not supported')
     }
 }
