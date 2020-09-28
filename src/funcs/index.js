@@ -1,3 +1,4 @@
+import { detect } from 'detect-browser'
 import nodes from '../domNodes' 
 
 // return true if the rectangle and circle are colliding
@@ -33,19 +34,26 @@ export const setBallPosition = (position) => {
 
 export const scoreRating = (score) => {
     if(score < 600)
-        return "that's not good, would you like to try again?"
+        return "That's not good, would you like to try again?"
     else if(score > 600 && score < 1200)
-        return "this is something! but i belive you can do better"
+        return "This is something! but i belive you can do better"
     else if(score > 1200 && score < 2500)
-        return "this is a good record. well done :)"
+        return "This is a good record. well done :)"
     else if(score > 2500 && score < 5000)
-        return "impressive record"
+        return "Impressive record"
     else if (score > 5000 && score < 1000)
-        return "the way you play is impeccable"
+        return "The way you play is impeccable"
     else if (score >  3500)
-        return "you are phenomenal"
+        return "You are phenomenal"
 }
 
-export const getTrue = () =>{
-    return true 
+export const getBrowserName = () => {
+    const browserName = detect().name 
+    return browserName
+}
+export const clearContainer = () => { 
+    nodes.container.innerHTML = " "
+    nodes.container.style.color = "white"
+    nodes.container.style.padding = "2rem"
+    nodes.container.style.position = "relative"
 }
