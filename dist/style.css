@@ -68,7 +68,7 @@ body {
     color: white;
     z-index:  100;
 }
-.start-game {
+.start-game, .game-over {
     position: absolute;
     height: 100vh;
     width: 100%;
@@ -80,8 +80,11 @@ body {
     z-index: 99;
     flex-direction: column;
 }
-.start-game p {
+.start-game p, .game-over p {
     padding: 0.5rem;
+}
+.game-over {
+    display: none;
 }
 @keyframes start {
     0% {
@@ -100,7 +103,7 @@ body {
         font-size: 3rem;
     }
 }
-.start-game-text {
+.title {
     animation-name: start;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
@@ -116,25 +119,35 @@ p{
     font-size: 18px;
     letter-spacing: 2px;
 }
-button.restart {
+.controllers button, button.start {
     background: none;
-    color: rgb(0, 255, 34);
-    border: 3px solid rgb(0, 255, 34);
+
     font-size: 18px;
     padding: 0.5rem 2rem;
     cursor: pointer;
     transition: 0.5s;
     outline: none;
-    position: absolute;
     top: 65%;
 
 }
-button.restart:hover {
+.controllers {
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+}
+.controllers button:hover {
     background:rgba(255, 0, 0, 0.088);
 }
 
-
-
+.controllers button.restart, button.back, button.start {
+    color: rgb(0, 255, 34);
+    border: 3px solid rgb(0, 255, 34);
+}
+.controllers button.back {
+    color: yellow; 
+     border: 3px solid yellow;
+}
 
 .color-green {
     color: rgb(0, 255, 0);
@@ -278,7 +291,7 @@ button.restart:hover {
     width: 280px;
     position: absolute;
     left: 3%;
-    top: 10%;
+    top: 5%;
     z-index: 99;
     border-bottom: 1px solid white;
     transition: 1s;
@@ -313,6 +326,32 @@ button.restart:hover {
       right: 10px;
       bottom: 20px;
       cursor: pointer;
-      transition: 1s;
-   
-    }
+      transition: 1s;   
+}
+.feedback-thanks{
+    position: absolute;
+    left: 3%;
+    top: 10%;
+    color: rgb(0, 255, 0);
+    z-index: 200;
+}
+button.start {
+    position: absolute;
+}
+.socials{ 
+    position: absolute;
+    left: 3%;
+    top: 20%;
+    z-index: 99;
+    opacity: 0.3;
+    transition: 200ms;
+    display: flex;
+    
+}
+.socials a {
+    color: white;
+    text-decoration: none;
+}
+.socials:hover {
+    opacity: 1;
+}
