@@ -12,7 +12,7 @@ const createHedges = () => {
     let containerHeight = nodes.container.getBoundingClientRect().height
     containerHeight = Math.round(containerHeight)
 
-    const passageHeight = 200
+    const passageHeight = states.passageHeight
 
     let topHedgeheight = Math.random() * (containerHeight * 0.4) + 70
     topHedgeheight = Math.round(topHedgeheight)
