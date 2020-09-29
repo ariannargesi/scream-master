@@ -41,7 +41,7 @@ if(deviceWith < 768){
     const p = document.createElement('p')
     const span = document.createElement("span")
     h4.innerText  = "sorry my friend!"
-    p.innerText = "for the best game experience, I decided to only let users with a large screen device, such as tablet or laptop to play this game. please come back with a bigger device"
+    p.innerText = "for the best game experience, I decided to only let users with a large screen device, such as tablets or laptops can play this game. please come back with a bigger device"
     span.innerText = "I will wait for you"    
     span.style.color = 'rgb(0, 255, 0)'
     nodes.container.appendChild(h4)
