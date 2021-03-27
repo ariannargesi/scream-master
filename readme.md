@@ -1,5 +1,5 @@
 # Scream Master
-<p>Play the game here </p>
+<p>A cool voice based game created using vanilla javascript</p>
 <p> ✔ Speak softly for going down, and <b>Scream</b> for going high ✔ </p>
 <p> For the best gaming experience, play this game only using Google Chrome, Mozilla Firefox, or Opera web browsers. also this game it's not compatible with safari and old versions of edge. </p>
 <p>I truly need/like your feedback and suggestions. so please Do not hesitate. I specify a section in the game about that. </p>
